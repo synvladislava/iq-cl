@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Calendar</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221207110403" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__buttons">
+					<button class="header__button" type="button" data-popup="#popup">
+						Добавить
+					</button>
+					<button class="header__button" type="button">Обновить</button>
+				</div>
+				<form class="header__form" action="#" method="get">
+					<picture><source srcset="img/search.webp" type="image/webp"><img class="header__input-icon" src="img/search.png" alt="" /></picture>
+					<input autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Событие, дата или участник" class="header__input" />
+				</form>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__container">
+				<div class="main__month-control month-control">
+					<button class="month-control__button _left" id="btnPrev" type="button"></button>
+					<p class="month-control__month" id="monthScreen">Ноябрь 2021</p>
+					<button class="month-control__button" id="btnNext" type="button"></button>
+					<button class="month-control__today-button" id="btnToday" type="button">
+						Сегодня
+					</button>
+				</div>
+				<table class="main__month-table month-table" data-popup="#popup_2">
+					<tr class="month-table__row">
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">
+								<span>Понедельник,</span> 27
+							</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption"><span>Вторник,</span> 28</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption"><span>Среда,</span> 29</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell _true">
+							<h5 class="month-table__caption"><span>Четверг,</span> 30</h5>
+							<h5 class="month-table__title">Шашлыки</h5>
+							<p class="month-table__description">
+								Филипп Коров, Дмитрий Табасков
+							</p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption"><span>Пятница,</span> 1</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption"><span>Суббота,</span> 2</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">
+								<span>Воскресенье,</span> 3
+							</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+					</tr>
+					<tr class="month-table__row">
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">4</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">5</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">6</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">7</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">8</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">9</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">10</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+					</tr>
+					<tr class="month-table__row">
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">11</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">12</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">13</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">14</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell _true">
+							<h5 class="month-table__caption">15</h5>
+							<h5 class="month-table__title">Летний лагерь</h5>
+							<p class="month-table__description">Алексей Маральный</p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">16</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">17</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+					</tr>
+					<tr class="month-table__row">
+						<td class="month-table__cell _true">
+							<h5 class="month-table__caption">18</h5>
+							<h5 class="month-table__title">Аква кутеж</h5>
+							<p class="month-table__description">
+								Михаил Шустин, Владимир Пупкин, Дмитрий Медев
+							</p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">19</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">20</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">21</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">22</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">23</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">24</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+					</tr>
+					<tr class="month-table__row">
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">25</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">26</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">27</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">28</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">29</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">30</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+						<td class="month-table__cell">
+							<h5 class="month-table__caption">31</h5>
+							<h5 class="month-table__title"></h5>
+							<p class="month-table__description"></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button class="popup__close" data-close type="button">x</button>
+				<form class="popup__form" action="#" method="get">
+					<input class="popup__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="25 ноября, Кутёж, Серж" />
+					<button class="popup__create" data-create type="button">Создать</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup_2" aria-hidden="true" class="popup_2">
+		<div class="popup_2__wrapper">
+			<div class="popup__content popup_2__content">
+				<button class="popup_2__close" data-close type="button">x</button>
+				<form class="popup_2__form" action="#" method="get">
+					<input class="popup_2__input-event" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Событие" />
+					<input class="popup_2__input-date" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="День, месяц, год" />
+					<input class="popup_2__input-names" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имена участников" />
+					<textarea class="popup_2__description" name="" id="" cols="30" rows="10" placeholder="Описание"></textarea>
+					<div class="popup_2__buttons">
+						<button class="popup_2__done" data-create type="button">
+							Готово
+						</button>
+						<button class="popup_2__delete" data-create type="button">
+							Удалить
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221207110403"></script>
+
+</body>
+
+</html>
